@@ -25,40 +25,42 @@ public class MainActivity extends AppCompatActivity {
         B1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int num1,num2,res;
-                num1 = Integer.parseInt(E1.getText().toString());
+                double num1,num2,res;
+                num1 = Double.parseDouble(E1.getText().toString());
                 num2=Integer.parseInt(E2.getText().toString());
                 res=num1+num2;
-                T1.setText(Integer.toString(res));
+                T1.setText(Double.toString(res));
             }
         });
         B2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int num1,num2,res;
-                num1 = Integer.parseInt(E1.getText().toString());
-                num2=Integer.parseInt(E2.getText().toString());
+                double num1,num2,res;
+                num1 = Double.parseDouble(E1.getText().toString());
+                num2=Double.parseDouble(E2.getText().toString());
                 res=num1-num2;
-                T1.setText(Integer.toString(res));
+                T1.setText(Double.toString(res));
             }
         });
         B3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int num1,num2,res;
-                num1 = Integer.parseInt(E1.getText().toString());
-                num2=Integer.parseInt(E2.getText().toString());
+                double num1,num2,res;
+                num1 = Double.parseDouble(E1.getText().toString());
+                num2=Double.parseDouble(E2.getText().toString());
                 res=num1*num2;
-                T1.setText(Integer.toString(res));
+                T1.setText(Double.toString(res));
             }
         });
         B4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int num1,num2;
-                double res;
-                num1 = Integer.parseInt(E1.getText().toString());
-                num2=Integer.parseInt(E2.getText().toString());
+                double num1, num2, res;
+                num1 = Double.parseDouble(E1.getText().toString());
+                num2=Double.parseDouble(E2.getText().toString());
+                if(num2 == 0){
+                    T1.setText("Infinity");
+                }
                 res=(double)num1/num2;
                 T1.setText(Double.toString(res));
             }
